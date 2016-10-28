@@ -26,7 +26,9 @@ As it's written in ES6, this module requires at least node v4.
             level: 'info',
             host: '192.168.0.15',
             port: 12201,
-            protocol: 'tls',
+            protocol: 'http',
+			username: '',
+			password: '',
             handleExceptions: true
         })
     ]
@@ -41,7 +43,9 @@ As it's written in ES6, this module requires at least node v4.
 * `hostname`: The name of this host (default: os.hostname())
 * `host`: The GELF server address (default: 127.0.0.1)
 * `port`: The GELF server port (default: 12201)
-* `protocol`: Protocol used to send data (TCP, TLS [TCP over TLS], HTTP or HTTPS). (default: tcp)
+* `username`: Username fop HTTP/HTTPS basic auth
+* `password`: Passowrd for HTTP/HTTPS basic auth
+* `protocol`: Protocol used to send data (TCP, TLS [TCP over TLS], HTTP or HTTPS (with basic basic auth). (default: tcp)
 * `level`: Level of messages this transport should log. See [winston levels](https://github.com/winstonjs/winston#logging-levels) (default: info)
 * `silent`: Boolean flag indicating whether to suppress output. (default: false)
 * `handleExceptions`: Boolean flag, whenever to handle uncaught exceptions. (default: false)
